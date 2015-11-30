@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Share Nom</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="tab/jquery-ui.css" />
+
+<!--<script src="js/javascript-tabs.js" type="text/javascript"></script>-->
+<!--Tabbing-->
+<script src="tab/jquery-1.9.1.js"></script>
+
+<script>$(function() {$( "#tabs" ).tabs();});</script>
+<!--//Tabbing-->
+
+        <script src="js/jquery.js"></script>
+		<script src="js/selectize.js"></script>
+		<script src="js/index.js"></script>
+        <script src="tab/jquery-ui.js"></script>
+	<script src="js/jquery.lightbox_me.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+        $(function() {
+            function launch() {
+                 $('#sign_up').lightbox_me({centered: true, onLoad: function() { $('#sign_up').find('input:first').focus()}});
+            }
+            
+            $('#try-1').click(function(e) {
+                $("#sign_up").lightbox_me({centered: true, onLoad: function() {
+					$("#sign_up").find("input:first").focus();
+				}});
+				
+                e.preventDefault();
+            });
+            
+            
+            $('table tr:nth-child(even)').addClass('stripe');
+        });
+    </script>
+
+<!--Customized Select-->
+<link rel="stylesheet" href="select/chosen.css">
+  <style type="text/css" media="all">
+    /* fix rtl for demo */
+    .chosen-rtl .chosen-drop { left: -9000px; }
+  </style>
+<!--//Customized Select-->
+</head>
+ 
+<body>
+
+<!-- Page contant start hare -->
+
+<div class="header">
+  <div class="container">
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" width="253" height="90" border="0"></a></div>
+    
+    <div class="sign_in"><a href="#" id="try-1">Sign in</a></div>
+    <div class="share"><a href="#"></a></div>
+    <div class="search"><input name="" type="text" value="Search by dish, restaurant or person"> <input name="" type="submit"></div>
+    <div class="find_share">
+    <ul>
+     <li><a href="dishes_list.html">Find <span>Great Dishes</span></a></li>
+     <li><a href="share_nom.html">Share <span>Great Dishes</span></a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="middle">
+	<div class="container">
+    
+    <div class="account_detail">
+    	<h2>Share Your Nom</h2>
+        
+        <div class="share_nom_inner">                
+            
+                
+          <div class="share_nom_head">
+              <img src="images/share_img.jpg" width="607" height="227">
+              <textarea placeholder="Tell us what you are eating?" rows="5"></textarea>
+          </div>
+          <div class="share_nom_icon">
+              <p><span>Rating :</span><a href="#"><img src="images/rating_star_yellow.png" width="15" height="16"></a><a href="#"><img src="images/rating_star_yellow.png" width="15" height="16"></a><a href="#"><img src="images/rating_star_yellow.png" width="15" height="16"></a> <a href="#"><img src="images/rating_star_blue.png" width="15" height="16"></a> <a href="#"><img src="images/rating_star_blue.png" width="15" height="16"></a></p>                          
+          </div>
+          <div class="share_nom_icon">
+              <label><img src="images/title.png" width="19" height="20"> Title</label>
+              <input type="text" class="share_input">
+          </div>
+          
+          <div class="share_nom_icon">
+              <label><img src="images/category.png" width="30" height="20"> Choose Category</label>
+              <div id="container">               
+                  <select data-placeholder="Choose Category" class="chosen-select" style="width:100%; height:20px" tabindex="2">
+                    <option value=""></option>
+                    <option value="Drink">Drink, Juice etc.</option>
+                    <option value="Drink">Drink, Juice etc.</option>  
+                </select>
+            </div>
+          </div>
+          
+          <div class="share_nom_icon">
+              <label><img src="images/location.png" width="24" height="29"> Name of Location</label>
+              <div id="container">               
+                  <select data-placeholder="Choose Category" class="chosen-select" style="width:100%; height:20px" tabindex="2">
+                    <option value=""></option>
+                    <option value="Drink">Drink, Juice etc.</option>
+                    <option value="Drink">Drink, Juice etc.</option>  
+                </select>
+            </div>
+          </div>
+          
+          
+          <div class="share_nom_icon">
+              <label><img src="images/tag_people.png" width="34" height="21"> Tag People</label>
+              <div id="container">               
+                  <select data-placeholder="TAG PEOPLE" multiple class="chosen-select-width" tabindex="16">
+            <option value=""></option>
+            <option>American Black Bear</option>
+            <option>Asiatic Black Bear</option>
+            <option>Brown Bear</option>
+            <option>Giant Panda</option>
+            <option>Sloth Bear</option>
+            <option>Sun Bear</option>
+            <option>Polar Bear</option>
+            <option>Spectacled Bear</option>
+          </select>
+            </div>
+          </div>
+          
+          
+          
+          
+           <div class="share_nom_icon">
+              <label><img src="images/currency_icon.png" width="37" height="20"> How much was your meal?</label>
+             <input type="text" class="share_input">
+          </div>
+          
+          <div class="share_nom_icon">
+              <label><img src="images/comment_icon.png" width="24" height="21"> Comment</label>
+            <textarea  class="share_textarea" rows="5"></textarea>             
+          </div>
+          
+          
+          
+           <div class="share_nom_icon">
+              <label>share with : <a href="#" style="margin-left:10px;"> <img src="images/foursquare.png" width="24" height="24"></a> <a href="#"><img src="images/facebook_share.png" width="26" height="26"></a> <a href="#"><img src="images/twitter_share.png" width="25" height="26"></a> <a href="#"><img src="images/google_plus_share.png" width="25" height="26"></a></label>
+                          
+          </div>
+          
+          
+          
+                
+                  
+             
+               
+          <input type="submit" value="Done" class="update_bt">      
+          
+        </div>
+    </div>
+    
+    
+    
+    
+
+
+</div>
+</div>
+
+<div class="footer">
+<div class="footer_top">
+  <div class="container relative">
+    <div class="footer_Left_con">
+     <h3>Find & share great dishes, not just restaurants.</h3>
+     <p>Find whatever you're craving, see what's good at any restaurant and learn what foodspotters, friends and experts love wherever you go.</p>
+     <p>Share great dishes using our apps or by tagging food photos <a href="#">#nomster</a> on Instagram</p>
+     <div class="iphone_btn"><a href="#"><img src="images/iphone_btn.png" alt=""></a></div>
+     <div class="social_icon">
+     <ul>
+     <li>Follow Us on</li>
+     <li><a href="https://www.facebook.com/pages/Nomster/178239729036566?ref=hl" target="_blank"><img src="images/facebook_icon.png" alt=""></a></li>
+     <li><a href="https://twitter.com/eatnoms"><img src="images/twitter_icon.png" alt=""></a></li>
+     <li><a href="#"><img src="images/google_icon.png" alt=""></a></li>
+     </ul>
+     </div>
+    </div>
+    <div class="iphone"><img src="images/iphone.png" alt=""></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="footer_bottom">
+  <div class="container">
+  <div class="copyright">©2013 nomster.com, Inc.</div>
+  <div class="footer_menu"><a href="#">About Us</a> |  <a href="#">Contact Us</a>  |  <a href="terms_condition.html">Terms & Conditions</a>  |  <a href="privacy.html">Privacy Policy</a></div>
+  <div class="floatright"><a href="index.html"><img src="images/footer_logo.png" alt=""></a></div>
+  <div class="commanblocks">
+  <p><span>Top Cities:</span> <a href="#">San Francisco</a>, <a href="#">CA · New York</a>, <a href="#">NY · Los Angeles</a>, <a href="#">CA · Quezon City</a>, 
+  <a href="#">Philippines · Philadelphia</a>, <a href="#">PA · Chicago</a>, <a href="#">IL · Toronto</a>, <a href="#">Canada · Sydney</a>, <a href="#">Australia · Singapore · London</a>, <a href="#">UK · More cities</a></p>
+  </div>
+  </div>
+</div>
+</div>
+
+<div id="sign_up">
+
+<div id="tabs">
+              <ul>
+                <li><a href="#tabs-1">Sign in</a></li>
+                <li><a href="#tabs-2">Join</a></li>
+                <li><a href="#tabs-3">Facebook</a></li>
+              </ul>
+              <div id="tabs-1">
+    <h3>Sign in to your Nomster account </h3>
+   
+    <div id="sign_up_form">
+      <div class="signup_form"><input name="" type="text" value="Username"></div>
+      <div class="signup_form"><input name="" type="text" value="Password"></div>
+      <div class="signup_form"><input name="" type="checkbox" value=""> Remember me for 14 days</div>
+      <div class="signup_form right_aline"><a href="#">Forgot Your Password?</a></div>
+    </div>
+    
+    <div class="signup_bottom">
+    <input name="" type="button" class="submit_btn" value="Agree & Sign In">
+    <p>By joining you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy <br> Policy</a>
+ updated October 2012.  </p>
+              </div>	
+              </div>
+               
+              <div id="tabs-2">
+               <h3>Join Nomster  </h3>
+   
+            <div id="sign_up_form">
+              <div class="signup_form"><input name="" type="text" value="Display Name (You Can Change this later)"></div>
+              <div class="signup_form"><input name="" type="text" value="Email"></div>
+              <div class="signup_form"><input name="" type="text" value="Password"></div>
+              <div class="signup_form"><input name="" type="text" value="Retype Password"></div>
+            </div>
+            
+            <div class="signup_bottom">
+            <input name="" type="button" class="submit_btn" value="Agree & Join">
+            <p>By joining you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy <br> Policy</a>
+         updated October 2012. </p>
+                </div>
+                      
+    </div>
+                      
+              <div id="tabs-3" class="center_aline">
+               <h3>Share what you love & see what friends love</h3>
+   
+                <div id="sign_up_form ">
+                  <div class="facebook_btn"><a href="#"><img src="images/facebook_button.png" alt=""></a></div>
+                  <div class="facebook_signin">You can also  Join   or   Sign In   with your email.</div>
+                </div>
+                
+                <div class="signup_bottom">
+                <p>By signing in you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a> 
+             updated October 2012. </p> 
+                </div>
+              </div>
+              
+                <div class="clear"></div>		
+  </div>
+
+   
+    
+    <a id="close_x" class="close" href="#">close</a>           
+ </div>
+<!--Customized Select-->
+  <script src="select/chosen.jquery.js" type="text/javascript"></script>
+  <script src="select/prism.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+  </script>
+<!--//Customized Select-->
+</body>
+</html>

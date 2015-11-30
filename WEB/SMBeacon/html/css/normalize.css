@@ -1,0 +1,527 @@
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+#input-tags { display:none;}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+ * Removes default margin.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+ * Sets consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/*
+ * Remove most spacing between table cells.
+ */
+
+.sprited {
+    background: url(../images/../images/download_sprite.png) no-repeat;
+    line-height: 1000px;
+    overflow: hidden;
+    display: block;
+}
+
+  #sign_up { background: #fff;border:#c6c6c6 1px solid; -webkit-box-shadow: rgba(0,0,0,.6) 0px 2px 12px; -moz-box-shadow:  rgba(0,0,0,.6) 0px 2px 12px; padding-top:20px;width: 700px; position: relative; display: none;z-index:999999 !important; }
+  #sign_up h3 { font-size:22px; color:#2b1a81; padding:0px 15px;}
+  #view3 h3 { background:#fff; position:relative; z-index:999; padding-top:15px;}
+	
+	
+     #sign_up_form { padding:15px 0px;}
+    #sign_up label {
+        display: block;
+        margin-bottom: 10px; 
+        color: #536376;
+        font-size: .9em;
+    }
+  
+    #sign_up label input {
+        display: block;
+        width: 393px;
+        height: 31px;
+        background-position: -201px 0;
+        padding: 2px 8px;
+        font-size: 1.2em;
+        line-height: 31px;
+    }
+    
+    #see_id {
+        width: 228px;
+        height: 23px;
+        background-position: -202px -133px;
+    }
+    #left_out {
+        background-position: -202px -158px;
+        width: 113px; height: 16px;
+    }
+    #sign_up_form { width:100%; float:left;
+    }
+    #actions {
+        float: left;
+        position: absolute;
+        right: 0;
+        height: 31px;
+        bottom: 20px;
+    }
+    a.form_button {
+        float: left;
+        width: 93px; height: 31px;
+        margin-right: 15px;
+    }
+    #cancel { background-position: -198px -36px; }
+    #log_in { background-position: -291px -36px; }
+    #cancel:hover { background-position: -198px -67px; }
+    #cancel:active { background-position: -198px -98px; }
+    #log_in:hover { background-position: -291px -67px; }
+    #log_in:active { background-position: -291px -98px; }
+    #close_x { 
+        width: 40px; height: 40px;
+        overflow: hidden; line-height: 1000px;
+        display: block;
+        position: absolute; top: -20px; right: -20px; background:url(../images/close.png) no-repeat;
+    }
+    #usage { background-position: -323px -172px; width: 67px; height: 22px;}
+	
+	
+	
+/* McTabs - menucool.com */
+
+.tabs ul
+{
+    height:30px; /* height #1 */
+    text-align:left; /*set to left, center, or right to align the tabs as desired*/    
+    font-size:0;
+    margin:0;padding:0;
+    list-style-type:none;
+	position:absolute; right:15px; top:20px;
+}
+        
+.tabs ul li
+{
+    display:inline;
+    margin:0;padding:0;
+    margin-right:3px; /*distance between tabs*/ position:relative;
+}
+        
+.tabs ul li a
+{
+    padding:0 10px; /* edit 16px for different tab width */
+    display:inline-block;    
+    font:normal 12px Verdana;
+    line-height:26px;/* height #1 */
+    text-decoration: none;
+    color:#696060;
+    outline:none;
+    position:relative;
+}
+        
+.tabs ul li a:link, .tabs ul li a:visited
+{
+    color:#222;
+}
+        
+.tabs ul li a:hover
+{
+    border-color: #fff; /*color #1*/
+	color:#000;
+}
+  
+/*selected tab style */
+.tabs ul li.selected a
+{
+    color:#000;
+    font-weight:normal;
+    border:1px solid #c6c6c6; border-bottom:#c6c6c6 3px solid;
+    background: url(../images/nav_bg.png) repeat-x;
+    z-index:3;
+} 
+.tabs ul li.selected:after  
+{ background:url(../images/tab_arrow.png) no-repeat; width:9px; height:8px; margin-left:-5px; position:absolute; bottom:-16px; left:50%; z-index:99; content: '';
+} 
+  
+        
+/*selected tab style on hover */
+.tabs ul li.selected a:hover
+{
+    text-decoration:none;
+}
+
+/* container of content panels */
+div.panel-container
+{
+    border:1px solid #DDD; /*color #1*/ 
+    border-radius:0 4px 4px 4px;
+    background-color:white; /*color #2*/
+    position:relative;    
+    padding:0px; margin:0px;
+}
+
+/* content panel */       
+div.panel-container > div
+{
+    padding:30px 26px;
+    
+    /* The two settings below should not be changed. */
+    display: block;
+    margin:0px;
+}
+
+/* loading image before ajax content is retrieved. Only applicable when Ajax is used.*/
+div.ajaxLoading {background:transparent url(loading.gif) no-repeat center center; height:150px; font-size:0;padding:0; margin:0; }
+	
+	

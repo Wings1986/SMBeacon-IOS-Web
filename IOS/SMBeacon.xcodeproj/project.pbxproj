@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		452AF9B71AB5621500429C24 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452AF9B61AB5621500429C24 /* QuartzCore.framework */; };
+		452AF9B91AB562C700429C24 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452AF9B81AB562C700429C24 /* Accelerate.framework */; };
+		452AF9BB1AB562F100429C24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452AF9BA1AB562F100429C24 /* UIKit.framework */; };
+		452AF9BD1AB562F800429C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452AF9BC1AB562F800429C24 /* Foundation.framework */; };
+		452AF9BF1AB5630000429C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452AF9BE1AB5630000429C24 /* CoreGraphics.framework */; };
+		452AF9C21AB5668D00429C24 /* URBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452AF9C11AB5668D00429C24 /* URBAlertView.m */; };
+		45922A271AA9E14100122495 /* libROXIMITYSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45922A1F1AA9E14100122495 /* libROXIMITYSDK.a */; };
+		45922A281AA9E14100122495 /* roximity.caf in Resources */ = {isa = PBXBuildFile; fileRef = 45922A201AA9E14100122495 /* roximity.caf */; };
+		45922A291AA9E14100122495 /* ROXIMITYSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45922A261AA9E14100122495 /* ROXIMITYSDK.bundle */; };
+		45D70D931AA76A0A0050F34C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70D921AA76A0A0050F34C /* main.m */; };
+		45D70D961AA76A0A0050F34C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70D951AA76A0A0050F34C /* AppDelegate.m */; };
+		45D70D991AA76A0A0050F34C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70D981AA76A0A0050F34C /* ViewController.m */; };
+		45D70D9C1AA76A0A0050F34C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D70D9A1AA76A0A0050F34C /* Main.storyboard */; };
+		45D70D9E1AA76A0A0050F34C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D70D9D1AA76A0A0050F34C /* Images.xcassets */; };
+		45D70DA11AA76A0A0050F34C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D70D9F1AA76A0A0050F34C /* LaunchScreen.xib */; };
+		45D70DAD1AA76A0A0050F34C /* SMBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70DAC1AA76A0A0050F34C /* SMBeaconTests.m */; };
+		45D70DBD1AA76E660050F34C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70DBC1AA76E660050F34C /* MainViewController.m */; };
+		45D70DC21AA76F590050F34C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D70DBF1AA76F590050F34C /* background.png */; };
+		45D70DC31AA76F590050F34C /* redeem_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D70DC01AA76F590050F34C /* redeem_checked.png */; };
+		45D70DC41AA76F590050F34C /* redeem_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D70DC11AA76F590050F34C /* redeem_unchecked.png */; };
+		45D70DC71AA772C60050F34C /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70DC61AA772C60050F34C /* Global.m */; };
+		45D70DCE1AA77D560050F34C /* OfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70DCA1AA77D560050F34C /* OfferTableViewCell.m */; };
+		45D70DD21AA783640050F34C /* OfferDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D70DD11AA783640050F34C /* OfferDetailViewController.m */; };
+		45D70DD41AA7898E0050F34C /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D70DD31AA7898E0050F34C /* button.png */; };
+		45D70DD61AA78AE80050F34C /* button_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D70DD51AA78AE80050F34C /* button_close.png */; };
+		45D70DE61AA7A3640050F34C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D70DE51AA7A3640050F34C /* AdSupport.framework */; };
+		45D70DE81AA7A36D0050F34C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D70DE71AA7A36D0050F34C /* CoreBluetooth.framework */; };
+		45D70DEA1AA7A3760050F34C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D70DE91AA7A3760050F34C /* CoreLocation.framework */; };
+		45D70DEC1AA7A37F0050F34C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D70DEB1AA7A37F0050F34C /* CoreTelephony.framework */; };
+		45E76E641AB76E48005145A4 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E76E611AB76E48005145A4 /* MJPopupBackgroundView.m */; };
+		45E76E651AB76E48005145A4 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E76E631AB76E48005145A4 /* UIViewController+MJPopupViewController.m */; };
+		45E76E681AB76F15005145A4 /* PhotoViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E76E671AB76F15005145A4 /* PhotoViewDialog.m */; };
+		45E76E6C1AB7DCF8005145A4 /* ic_accepted.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E76E691AB7DCF8005145A4 /* ic_accepted.png */; };
+		45E76E6D1AB7DCF8005145A4 /* ic_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E76E6A1AB7DCF8005145A4 /* ic_closed.png */; };
+		45E76E6E1AB7DCF8005145A4 /* ic_redeemed.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E76E6B1AB7DCF8005145A4 /* ic_redeemed.png */; };
+		D2824D023BA2BD20C4FCF02E /* libPods-SMBeacon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFD89C29866124562DA2654 /* libPods-SMBeacon.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45D70DA71AA76A0A0050F34C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45D70D851AA76A090050F34C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D70D8C1AA76A090050F34C;
+			remoteInfo = SMBeacon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0402B1348ECDC6342AEA6B46 /* Pods-SMBeacon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMBeacon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMBeacon/Pods-SMBeacon.debug.xcconfig"; sourceTree = "<group>"; };
+		452AF9B61AB5621500429C24 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		452AF9B81AB562C700429C24 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		452AF9BA1AB562F100429C24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		452AF9BC1AB562F800429C24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		452AF9BE1AB5630000429C24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		452AF9C01AB5668D00429C24 /* URBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URBAlertView.h; sourceTree = "<group>"; };
+		452AF9C11AB5668D00429C24 /* URBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URBAlertView.m; sourceTree = "<group>"; };
+		45922A1F1AA9E14100122495 /* libROXIMITYSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libROXIMITYSDK.a; sourceTree = "<group>"; };
+		45922A201AA9E14100122495 /* roximity.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roximity.caf; sourceTree = "<group>"; };
+		45922A221AA9E14100122495 /* ROXBeaconRangeUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROXBeaconRangeUpdateDelegate.h; sourceTree = "<group>"; };
+		45922A231AA9E14100122495 /* ROXIMITYEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROXIMITYEngine.h; sourceTree = "<group>"; };
+		45922A241AA9E14100122495 /* ROXIMITYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROXIMITYSDK.h; sourceTree = "<group>"; };
+		45922A251AA9E14100122495 /* ROXNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROXNotifications.h; sourceTree = "<group>"; };
+		45922A261AA9E14100122495 /* ROXIMITYSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ROXIMITYSDK.bundle; sourceTree = "<group>"; };
+		45D70D8D1AA76A090050F34C /* SMBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D70D911AA76A090050F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D70D921AA76A0A0050F34C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45D70D941AA76A0A0050F34C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		45D70D951AA76A0A0050F34C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		45D70D971AA76A0A0050F34C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		45D70D981AA76A0A0050F34C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		45D70D9B1AA76A0A0050F34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45D70D9D1AA76A0A0050F34C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45D70DA01AA76A0A0050F34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		45D70DA61AA76A0A0050F34C /* SMBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D70DAB1AA76A0A0050F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D70DAC1AA76A0A0050F34C /* SMBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMBeaconTests.m; sourceTree = "<group>"; };
+		45D70DBB1AA76E660050F34C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		45D70DBC1AA76E660050F34C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		45D70DBF1AA76F590050F34C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		45D70DC01AA76F590050F34C /* redeem_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redeem_checked.png; sourceTree = "<group>"; };
+		45D70DC11AA76F590050F34C /* redeem_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redeem_unchecked.png; sourceTree = "<group>"; };
+		45D70DC51AA772C60050F34C /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		45D70DC61AA772C60050F34C /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		45D70DC91AA77D560050F34C /* OfferTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferTableViewCell.h; sourceTree = "<group>"; };
+		45D70DCA1AA77D560050F34C /* OfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferTableViewCell.m; sourceTree = "<group>"; };
+		45D70DD01AA783630050F34C /* OfferDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetailViewController.h; sourceTree = "<group>"; };
+		45D70DD11AA783640050F34C /* OfferDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetailViewController.m; sourceTree = "<group>"; };
+		45D70DD31AA7898E0050F34C /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		45D70DD51AA78AE80050F34C /* button_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_close.png; sourceTree = "<group>"; };
+		45D70DE51AA7A3640050F34C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		45D70DE71AA7A36D0050F34C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		45D70DE91AA7A3760050F34C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		45D70DEB1AA7A37F0050F34C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		45E76E601AB76E48005145A4 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		45E76E611AB76E48005145A4 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		45E76E621AB76E48005145A4 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		45E76E631AB76E48005145A4 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		45E76E661AB76F15005145A4 /* PhotoViewDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewDialog.h; sourceTree = "<group>"; };
+		45E76E671AB76F15005145A4 /* PhotoViewDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewDialog.m; sourceTree = "<group>"; };
+		45E76E691AB7DCF8005145A4 /* ic_accepted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_accepted.png; sourceTree = "<group>"; };
+		45E76E6A1AB7DCF8005145A4 /* ic_closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_closed.png; sourceTree = "<group>"; };
+		45E76E6B1AB7DCF8005145A4 /* ic_redeemed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_redeemed.png; sourceTree = "<group>"; };
+		942F0DED303E9CC881754935 /* Pods-SMBeacon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMBeacon.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMBeacon/Pods-SMBeacon.release.xcconfig"; sourceTree = "<group>"; };
+		FFFD89C29866124562DA2654 /* libPods-SMBeacon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMBeacon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45D70D8A1AA76A090050F34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452AF9BF1AB5630000429C24 /* CoreGraphics.framework in Frameworks */,
+				452AF9BD1AB562F800429C24 /* Foundation.framework in Frameworks */,
+				452AF9BB1AB562F100429C24 /* UIKit.framework in Frameworks */,
+				452AF9B91AB562C700429C24 /* Accelerate.framework in Frameworks */,
+				452AF9B71AB5621500429C24 /* QuartzCore.framework in Frameworks */,
+				45D70DEC1AA7A37F0050F34C /* CoreTelephony.framework in Frameworks */,
+				45922A271AA9E14100122495 /* libROXIMITYSDK.a in Frameworks */,
+				45D70DEA1AA7A3760050F34C /* CoreLocation.framework in Frameworks */,
+				45D70DE81AA7A36D0050F34C /* CoreBluetooth.framework in Frameworks */,
+				45D70DE61AA7A3640050F34C /* AdSupport.framework in Frameworks */,
+				D2824D023BA2BD20C4FCF02E /* libPods-SMBeacon.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D70DA31AA76A0A0050F34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2414B083926C137989EDD47B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452AF9BE1AB5630000429C24 /* CoreGraphics.framework */,
+				452AF9BC1AB562F800429C24 /* Foundation.framework */,
+				452AF9BA1AB562F100429C24 /* UIKit.framework */,
+				452AF9B81AB562C700429C24 /* Accelerate.framework */,
+				452AF9B61AB5621500429C24 /* QuartzCore.framework */,
+				45D70DEB1AA7A37F0050F34C /* CoreTelephony.framework */,
+				45D70DE91AA7A3760050F34C /* CoreLocation.framework */,
+				45D70DE71AA7A36D0050F34C /* CoreBluetooth.framework */,
+				45D70DE51AA7A3640050F34C /* AdSupport.framework */,
+				FFFD89C29866124562DA2654 /* libPods-SMBeacon.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		452AF9B21AB55BC700429C24 /* URBAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				452AF9C01AB5668D00429C24 /* URBAlertView.h */,
+				452AF9C11AB5668D00429C24 /* URBAlertView.m */,
+			);
+			path = URBAlertView;
+			sourceTree = "<group>";
+		};
+		45922A1E1AA9E14100122495 /* ROXIMITY_SDK_1_3_179 */ = {
+			isa = PBXGroup;
+			children = (
+				45922A1F1AA9E14100122495 /* libROXIMITYSDK.a */,
+				45922A201AA9E14100122495 /* roximity.caf */,
+				45922A211AA9E14100122495 /* ROXIMITYSDK */,
+				45922A261AA9E14100122495 /* ROXIMITYSDK.bundle */,
+			);
+			path = ROXIMITY_SDK_1_3_179;
+			sourceTree = "<group>";
+		};
+		45922A211AA9E14100122495 /* ROXIMITYSDK */ = {
+			isa = PBXGroup;
+			children = (
+				45922A221AA9E14100122495 /* ROXBeaconRangeUpdateDelegate.h */,
+				45922A231AA9E14100122495 /* ROXIMITYEngine.h */,
+				45922A241AA9E14100122495 /* ROXIMITYSDK.h */,
+				45922A251AA9E14100122495 /* ROXNotifications.h */,
+			);
+			path = ROXIMITYSDK;
+			sourceTree = "<group>";
+		};
+		45D70D841AA76A090050F34C = {
+			isa = PBXGroup;
+			children = (
+				45922A1E1AA9E14100122495 /* ROXIMITY_SDK_1_3_179 */,
+				45D70D8F1AA76A090050F34C /* SMBeacon */,
+				45D70DA91AA76A0A0050F34C /* SMBeaconTests */,
+				45D70D8E1AA76A090050F34C /* Products */,
+				E60C2CA309DB8DA8C8D39289 /* Pods */,
+				2414B083926C137989EDD47B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		45D70D8E1AA76A090050F34C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45D70D8D1AA76A090050F34C /* SMBeacon.app */,
+				45D70DA61AA76A0A0050F34C /* SMBeaconTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45D70D8F1AA76A090050F34C /* SMBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				45D70DBE1AA76F590050F34C /* RES */,
+				45D70DB71AA76DF40050F34C /* Class */,
+				45D70D941AA76A0A0050F34C /* AppDelegate.h */,
+				45D70D951AA76A0A0050F34C /* AppDelegate.m */,
+				45D70D971AA76A0A0050F34C /* ViewController.h */,
+				45D70D981AA76A0A0050F34C /* ViewController.m */,
+				45D70D9A1AA76A0A0050F34C /* Main.storyboard */,
+				45D70D9D1AA76A0A0050F34C /* Images.xcassets */,
+				45D70D9F1AA76A0A0050F34C /* LaunchScreen.xib */,
+				45D70D901AA76A090050F34C /* Supporting Files */,
+			);
+			path = SMBeacon;
+			sourceTree = "<group>";
+		};
+		45D70D901AA76A090050F34C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45D70D911AA76A090050F34C /* Info.plist */,
+				45D70D921AA76A0A0050F34C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45D70DA91AA76A0A0050F34C /* SMBeaconTests */ = {
+			isa = PBXGroup;
+			children = (
+				45D70DAC1AA76A0A0050F34C /* SMBeaconTests.m */,
+				45D70DAA1AA76A0A0050F34C /* Supporting Files */,
+			);
+			path = SMBeaconTests;
+			sourceTree = "<group>";
+		};
+		45D70DAA1AA76A0A0050F34C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45D70DAB1AA76A0A0050F34C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45D70DB71AA76DF40050F34C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				45E76E5F1AB76E48005145A4 /* PopupViewController */,
+				452AF9B21AB55BC700429C24 /* URBAlertView */,
+				45D70DC81AA77D560050F34C /* Cell */,
+				45D70DC51AA772C60050F34C /* Global.h */,
+				45D70DC61AA772C60050F34C /* Global.m */,
+				45D70DBB1AA76E660050F34C /* MainViewController.h */,
+				45D70DBC1AA76E660050F34C /* MainViewController.m */,
+				45D70DD01AA783630050F34C /* OfferDetailViewController.h */,
+				45D70DD11AA783640050F34C /* OfferDetailViewController.m */,
+				45E76E661AB76F15005145A4 /* PhotoViewDialog.h */,
+				45E76E671AB76F15005145A4 /* PhotoViewDialog.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		45D70DBE1AA76F590050F34C /* RES */ = {
+			isa = PBXGroup;
+			children = (
+				45E76E691AB7DCF8005145A4 /* ic_accepted.png */,
+				45E76E6A1AB7DCF8005145A4 /* ic_closed.png */,
+				45E76E6B1AB7DCF8005145A4 /* ic_redeemed.png */,
+				45D70DD51AA78AE80050F34C /* button_close.png */,
+				45D70DD31AA7898E0050F34C /* button.png */,
+				45D70DBF1AA76F590050F34C /* background.png */,
+				45D70DC01AA76F590050F34C /* redeem_checked.png */,
+				45D70DC11AA76F590050F34C /* redeem_unchecked.png */,
+			);
+			path = RES;
+			sourceTree = "<group>";
+		};
+		45D70DC81AA77D560050F34C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				45D70DC91AA77D560050F34C /* OfferTableViewCell.h */,
+				45D70DCA1AA77D560050F34C /* OfferTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		45E76E5F1AB76E48005145A4 /* PopupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				45E76E601AB76E48005145A4 /* MJPopupBackgroundView.h */,
+				45E76E611AB76E48005145A4 /* MJPopupBackgroundView.m */,
+				45E76E621AB76E48005145A4 /* UIViewController+MJPopupViewController.h */,
+				45E76E631AB76E48005145A4 /* UIViewController+MJPopupViewController.m */,
+			);
+			path = PopupViewController;
+			sourceTree = "<group>";
+		};
+		E60C2CA309DB8DA8C8D39289 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0402B1348ECDC6342AEA6B46 /* Pods-SMBeacon.debug.xcconfig */,
+				942F0DED303E9CC881754935 /* Pods-SMBeacon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45D70D8C1AA76A090050F34C /* SMBeacon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D70DB01AA76A0A0050F34C /* Build configuration list for PBXNativeTarget "SMBeacon" */;
+			buildPhases = (
+				3134B5D6AA42CA36580FB750 /* Check Pods Manifest.lock */,
+				45D70D891AA76A090050F34C /* Sources */,
+				45D70D8A1AA76A090050F34C /* Frameworks */,
+				45D70D8B1AA76A090050F34C /* Resources */,
+				66AADC9E503BEEBF0AB9B0C5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMBeacon;
+			productName = SMBeacon;
+			productReference = 45D70D8D1AA76A090050F34C /* SMBeacon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45D70DA51AA76A0A0050F34C /* SMBeaconTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D70DB31AA76A0A0050F34C /* Build configuration list for PBXNativeTarget "SMBeaconTests" */;
+			buildPhases = (
+				45D70DA21AA76A0A0050F34C /* Sources */,
+				45D70DA31AA76A0A0050F34C /* Frameworks */,
+				45D70DA41AA76A0A0050F34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45D70DA81AA76A0A0050F34C /* PBXTargetDependency */,
+			);
+			name = SMBeaconTests;
+			productName = SMBeaconTests;
+			productReference = 45D70DA61AA76A0A0050F34C /* SMBeaconTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45D70D851AA76A090050F34C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Info Geniuz";
+				TargetAttributes = {
+					45D70D8C1AA76A090050F34C = {
+						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					45D70DA51AA76A0A0050F34C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 45D70D8C1AA76A090050F34C;
+					};
+				};
+			};
+			buildConfigurationList = 45D70D881AA76A090050F34C /* Build configuration list for PBXProject "SMBeacon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45D70D841AA76A090050F34C;
+			productRefGroup = 45D70D8E1AA76A090050F34C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45D70D8C1AA76A090050F34C /* SMBeacon */,
+				45D70DA51AA76A0A0050F34C /* SMBeaconTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45D70D8B1AA76A090050F34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D70DD41AA7898E0050F34C /* button.png in Resources */,
+				45D70DC41AA76F590050F34C /* redeem_unchecked.png in Resources */,
+				45D70D9C1AA76A0A0050F34C /* Main.storyboard in Resources */,
+				45E76E6C1AB7DCF8005145A4 /* ic_accepted.png in Resources */,
+				45D70DC21AA76F590050F34C /* background.png in Resources */,
+				45E76E6D1AB7DCF8005145A4 /* ic_closed.png in Resources */,
+				45E76E6E1AB7DCF8005145A4 /* ic_redeemed.png in Resources */,
+				45922A281AA9E14100122495 /* roximity.caf in Resources */,
+				45922A291AA9E14100122495 /* ROXIMITYSDK.bundle in Resources */,
+				45D70DD61AA78AE80050F34C /* button_close.png in Resources */,
+				45D70DC31AA76F590050F34C /* redeem_checked.png in Resources */,
+				45D70DA11AA76A0A0050F34C /* LaunchScreen.xib in Resources */,
+				45D70D9E1AA76A0A0050F34C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D70DA41AA76A0A0050F34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3134B5D6AA42CA36580FB750 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66AADC9E503BEEBF0AB9B0C5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMBeacon/Pods-SMBeacon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45D70D891AA76A090050F34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D70DCE1AA77D560050F34C /* OfferTableViewCell.m in Sources */,
+				45E76E651AB76E48005145A4 /* UIViewController+MJPopupViewController.m in Sources */,
+				45D70DD21AA783640050F34C /* OfferDetailViewController.m in Sources */,
+				45D70DC71AA772C60050F34C /* Global.m in Sources */,
+				45D70D991AA76A0A0050F34C /* ViewController.m in Sources */,
+				45E76E681AB76F15005145A4 /* PhotoViewDialog.m in Sources */,
+				45D70D961AA76A0A0050F34C /* AppDelegate.m in Sources */,
+				45E76E641AB76E48005145A4 /* MJPopupBackgroundView.m in Sources */,
+				452AF9C21AB5668D00429C24 /* URBAlertView.m in Sources */,
+				45D70DBD1AA76E660050F34C /* MainViewController.m in Sources */,
+				45D70D931AA76A0A0050F34C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D70DA21AA76A0A0050F34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D70DAD1AA76A0A0050F34C /* SMBeaconTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45D70DA81AA76A0A0050F34C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D70D8C1AA76A090050F34C /* SMBeacon */;
+			targetProxy = 45D70DA71AA76A0A0050F34C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45D70D9A1AA76A0A0050F34C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45D70D9B1AA76A0A0050F34C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45D70D9F1AA76A0A0050F34C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45D70DA01AA76A0A0050F34C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45D70DAE1AA76A0A0050F34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		45D70DAF1AA76A0A0050F34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45D70DB11AA76A0A0050F34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0402B1348ECDC6342AEA6B46 /* Pods-SMBeacon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Costas Aletrari (GG6SX8FBAU)";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Haneke\"",
+					"\"$(inherited)\"",
+				);
+				INFOPLIST_FILE = SMBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SMBeacon/ROXIMITYSDK",
+					"$(PROJECT_DIR)/ROXIMITY_SDK_1_3_179",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "072dadb1-a3f1-4f0d-8092-e35549f791a6";
+			};
+			name = Debug;
+		};
+		45D70DB21AA76A0A0050F34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942F0DED303E9CC881754935 /* Pods-SMBeacon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sayv Mobile, LLC (V723637V6V)";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Haneke\"",
+					"\"$(inherited)\"",
+				);
+				INFOPLIST_FILE = SMBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SMBeacon/ROXIMITYSDK",
+					"$(PROJECT_DIR)/ROXIMITY_SDK_1_3_179",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a428500f-dcdf-4893-b846-ad77494f5013";
+			};
+			name = Release;
+		};
+		45D70DB41AA76A0A0050F34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SMBeaconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMBeacon.app/SMBeacon";
+			};
+			name = Debug;
+		};
+		45D70DB51AA76A0A0050F34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SMBeaconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMBeacon.app/SMBeacon";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45D70D881AA76A090050F34C /* Build configuration list for PBXProject "SMBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D70DAE1AA76A0A0050F34C /* Debug */,
+				45D70DAF1AA76A0A0050F34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45D70DB01AA76A0A0050F34C /* Build configuration list for PBXNativeTarget "SMBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D70DB11AA76A0A0050F34C /* Debug */,
+				45D70DB21AA76A0A0050F34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45D70DB31AA76A0A0050F34C /* Build configuration list for PBXNativeTarget "SMBeaconTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D70DB41AA76A0A0050F34C /* Debug */,
+				45D70DB51AA76A0A0050F34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45D70D851AA76A090050F34C /* Project object */;
+}

@@ -1,0 +1,304 @@
+
+1. Register
+
+	exe:) /api/index.php?action=register
+	
+	-input:
+		* username
+		* firstname
+		* lastname
+		* age
+		* gender
+		* email
+		* password
+		* phone
+		
+		* avatar
+	-output
+		return user data if success
+		@error codes
+			* -100: Parameters are missing.
+			* -101: Duplicate Email!
+			* -102: Fail to register!
+			
+			
+
+2. Login
+
+	exe:) /api/index.php?action=login
+	
+	-input:
+		* email
+		* password
+		* deviceToken
+		
+	-output
+		return 1 if success
+		@error codes
+			* -103: Paramters are missing!
+			* -104: Invalid Login
+			
+			
+3. Update Profile
+
+	exe:) /api/index.php?action=update_profile
+	
+	-input:
+		* uid
+		* firstname
+		* lastname
+		* email
+		* password
+		* phone
+		* age
+		* gender
+		
+		* avatar
+	-output
+		return user data if success
+		@error codes
+			* -105: Parameters are missing.
+			* -106: Fail to Update!
+			
+4. Category List
+
+	exe:) /api/index.php?action=get_categories
+	
+	-input:
+	-output
+		return category data if success
+		@error codes
+						
+						
+5. Create Review
+
+	exe:) /api/index.php?action=create_review
+	
+	-input:
+		*	userid
+		*	title
+		*	description
+		*	restaurant
+		*	latitude
+		*	longitude
+		*	tag (i.e: 2,4,2,8,24..)
+		*	category 
+		*	image
+		
+	-output
+		return 1 if success
+		@error codes
+			* -107: Parameters are missing.
+			* -108: Invalid User.
+			* -109: Can not create new Review.
+			
+					
+6. Finish Review
+
+	exe:) /api/index.php?action=finish_review
+	
+	-input:
+		*	userid
+		*	reviewid
+		*	rating
+		*	comment
+		*	price
+		
+	-output
+		return 1 if success
+		@error codes
+			* -107: Parameters are missing.
+			* -108: Invalid User.
+			* -109: Invalid Review.
+			* -110: Invalid User of Review.
+			* -111: Can not finish Review.
+			
+			
+7. Like Review
+
+	exe:) /api/index.php?action=like_review
+	
+	-input:
+		*	userid
+		*	reviewid
+		
+	-output
+		return 1 if success
+			* -110: Parameters are missing.
+			* -111: Invalid User.
+			* -112: Invalid Review.
+			* -113: User has already liked this Review.
+			* -114: Unable to like the review.
+			
+8. Unlike Review
+
+	exe:) /api/index.php?action=unlike_review
+	
+	-input:
+		*	userid
+		*	reviewid
+		
+	-output
+		return 1 if success
+			* -110: Parameters are missing.
+			* -111: Invalid User.
+			* -112: Invalid Review.
+			* -113: User has not liked this Review.
+			* -114: Unable to unlike the review.		
+			                                                                                                                                	
+			
+9. Comment Review
+
+	exe:) /api/index.php?action=comment_review
+	
+	-input:
+		*	userid
+		*	reviewid
+		*	comment
+		
+	-output
+		return 1 if success
+			* -115: Parameters are missing.
+			* -116: Invalid User.
+			* -117: Invalid Review.
+			* -118: User has already liked this Review.
+			* -119: Unable to comment the review.
+			
+		
+		
+10. Search Review
+
+	exe:) /api/index.php?action=search_review
+	
+	-input:
+		* radius
+				* lat
+				* lon
+		* name
+		* price
+		* rating
+		* category
+		* country
+		* city
+		* state
+	-output
+		return review data if success
+		@error codes
+			
+			
+		
+11. Recommend Review
+
+	exe:) /api/index.php?action=recommended_review
+	
+	-input:
+		* userid
+		* lat
+		* lon
+	-output
+		return review data if success
+		@error codes
+		
+		
+		
+					
+12. User's Review
+
+	exe:) /api/index.php?action=user_review
+	
+	-input:
+		* userid
+		
+	-output
+		return review data if success
+			* -120: Invalid User.
+		
+		
+		
+13. Get Review Detail
+
+	exe:) /api/index.php?action=review_detail
+	
+	-input:
+		* reviewid
+	-output
+		return detail data if success
+			* -121: Invalid Review.
+		
+		
+		
+14. Following User
+
+	exe:) /api/index.php?action=following
+	
+	-input:
+		*	userid
+		*	following
+		
+	-output
+		return 1 if success
+			* -122: Parameters are missing.
+			* -123: Invalid User.
+			* -124: Invalid Following User.
+			* -125: User has already Followed this User.
+			* -126: Unable to follow this User.
+		
+		
+		
+15. UnFollowing User
+
+	exe:) /api/index.php?action=unfollowing
+	
+	-input:
+		*	userid
+		*	following
+		
+	-output
+		return 1 if success
+			* -127: Parameters are missing.
+			* -128: Invalid User.
+			* -129: Invalid Following User.
+			* -130: User has not Followed this User.
+			* -131: Unable to unfollow this User.
+		
+		
+		
+16. Get Followings
+
+	exe:) /api/index.php?action=get_followings
+	
+	-input:
+		*	userid
+		
+	-output
+		return 1 if success
+			* -132: Parameters are missing.
+			* -133: Invalid User.
+		
+		
+		
+17. Get Followers
+
+	exe:) /api/index.php?action=get_followers
+	
+	-input:
+		*	userid
+		
+	-output
+		return 1 if success
+			* -134: Parameters are missing.
+			* -135: Invalid User.
+		
+		
+18. Followers Review
+
+	exe:) /api/index.php?action=followers_review
+	
+	-input:
+		*	userid
+		
+	-output
+		return 1 if success
+			* -136: Parameters are missing.
+			* -137: Invalid User.
+		

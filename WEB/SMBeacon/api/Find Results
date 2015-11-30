@@ -1,0 +1,144 @@
+Searching 222 files for "single_row"
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/index.php:
+   17          {
+   18              $Title = "User Profile";
+   19:             $user = $db->single_row("administrator", "*", "idx='" . $_SESSION['UserID'] . "'");
+   20              
+   21              if (isset($_POST['UpdateSettings'])) {
+   ..
+   63              $Title = "Merchants";
+   64              $mID = $_REQUEST['mID'];
+   65:             $merchant = $db->single_row("merchant", "*", "id='$mID'");
+   66              
+   67              if ($_REQUEST['act'] == 'del' && $mID != '') {
+   ..
+  114          {
+  115              $Title = "Edit Merchant";
+  116:             $merchant = $db->single_row("merchant", "*", "id='" . $_REQUEST['mID'] . "'");
+  117  
+  118              if (! empty($_POST['UpdateMerchant'])) {
+  ...
+  167          {
+  168              $Title = "Edit Beacon";
+  169:             $beacon = $db->single_row("beacon", "*", "id='" . $_REQUEST['bID'] . "'");
+  170      
+  171              if (! empty($_POST['UpdateBeacon'])) {
+  ...
+  226          {
+  227              $Title = "Edit Offer";
+  228:             $offer = $db->single_row("offer", "*", "id='" . $_REQUEST['oID'] . "'");
+  229  
+  230              if (! empty($_POST['UpdateOffer'])) {
+  ...
+  297              $fID = $_REQUEST['fID'];
+  298              
+  299:             $featured = $db->single_row("featured", "*", "id='$fID'");
+  300              
+  301              if ($_REQUEST['act'] == 'del' && $fID != '') {
+  ...
+  348              $Title = "Edit Featured App";
+  349              
+  350:             $featured = $db->single_row("featured", "*", "id='" . $_REQUEST['fID'] . "'");
+  351              
+  352              if (! empty($_POST['UpdateFeatured'])) {
+  ...
+  384              $bID = $_REQUEST['bID'];
+  385              
+  386:             $bookmark = $db->single_row("bookmark", "*", "id='$bID'");
+  387              
+  388              if ($_REQUEST['act'] == 'del' && $bID != '') {
+  ...
+  435          {
+  436              $Title = "Edit Bookmark";
+  437:             $bookmark = $db->single_row("bookmark", "*", "id='" . $_REQUEST['bID'] . "'");
+  438              
+  439              if (! empty($_POST['UpdateBookmark'])) {
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/login.php:
+    4  		
+    5    if(isset($_POST['users_name']) ){
+    6: 		$checkin = $db->single_row("administrator", "*", "username='".mysql_escape_string($_POST['users_name'])."' and password = '".mysql_escape_string($_POST['users_password'])."' and is_admin='1'");
+    7  		//print_r(checkin);exit(0);
+    8  		
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/template.php:
+   67  			 </li>
+   68  			 <?php if ( $page == 'beacon' || $page == 'offer' ) {
+   69: 			     $merchant = $db->single_row("merchant", "*", "id='" . $_REQUEST['mID'] . "'");
+   70  			 ?>
+   71  			 <li>
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/api/api/class/AppController.php:
+   14  			$secPackage = trim($packageList[$i]);
+   15  			
+   16: 			if (Database::single_row("featured", "*", "package='".$secPackage."'"))
+   17  				$featuredList[] = $secPackage;
+   18  		}
+   ..
+   38  	    $data3 = array();
+   39  	    
+   40: 	    $row = Database::single_row("beacon", "*", "uuid='".$beacon."'");
+   41  
+   42  
+   43  	    if ( $row ) {
+   44: 	        $row2 = Database::single_row("offer", "*", "id='".$row['offer_id']."'");
+   45  
+   46  	        if ( $row2 ) {
+   ..
+   56  	            $data['merchantID'] = $row2['merchant_id'];
+   57  
+   58: 	            $row3 = Database::single_row("merchant", "*", "id='".$data['merchantID']."'");
+   59  
+   60  	            if ( $row3 ) {
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/api/common/functions.php:
+  237  	   return $time_ago;
+  238  	}
+  239: 	public function single_row($tab,$fields="*",$where="1=1",$orderby="1",$order="desc",$limit="",$disp=false)
+  240  	{
+  241  		$res_single = Database::sel_rec($tab,$fields,$where,$orderby,$order,$limit,$disp);
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/api/include/connect.php:
+   27  //$admintwitter=get_single_value (ADMIN,'twitter_acc','1=1');
+   28  //$adminfacebook=get_single_value (ADMIN,'facebook_acc','1=1');
+   29: //$adminsetting=single_row(ADMIN_SETTING,'*','1=1');
+   30  //$blog_url=get_single_value(ADMIN_SETTING,'blog_url','1=1');
+   31  //$paypal_acc=get_single_value (ADMIN,'paypal_acc','1=1');
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/api/include/db_function.php:
+  137  	
+  138  	//...............................select  single row from a table [start]................
+  139: 	function single_row($tab,$fields="*",$where="1=1",$orderby="1",$order="desc",$limit="",$disp=false)
+  140  	{
+  141  		$res_single = sel_rec($tab,$fields,$where,$orderby,$order,$limit,$disp);
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/api/include/function.php:
+   14  	//	$row = mysql_query($qry);
+   15  		
+   16: 		$row = single_row(ADMIN,"*","roleid='".$roleid."' and`username`='".$username."' and `password`='".$password."'","id","desc","",false);
+   17  		if ($row!=false)
+   18  		{
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/common/functions.php:
+  257  	   return $time_ago;
+  258  	}
+  259: 	public function single_row($tab,$fields="*",$where="1=1",$orderby="1",$order="desc",$limit="",$disp=false)
+  260  	{
+  261  		$res_single = Database::sel_rec($tab,$fields,$where,$orderby,$order,$limit,$disp);
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/views/beacon.php:
+   33  								<td style="text-align: center;"><?php echo $r['uuid'];?></td>
+   34  								<td style="text-align: center;"><a href="/index.php?page=offer&mID=<?php echo $r['merchant_id'];?>"><?php
+   35: 								$offer = $db->single_row("offer", "*", "id='" . $r['offer_id'] . "'"); 
+   36  								echo $offer['title'];?></a></td>
+   37  								<td style="text-align: center;">
+
+/Applications/XAMPP/xamppfiles/htdocs/SMBeacon/views/edit_beacon.php:
+   18  						    <select name='offer_id' class='span8'>
+   19                                  <option value='0'>&nbsp;</option>
+   20:                                 <?php $row = $db->single_row( 'offer', "id, title", 'id=' . $beacon['offer_id'] );
+   21                                  if ( $row ) {
+   22                                      printf( "<option value='%s' %s>%s</option>", $row['id'], ( $row['id'] == $beacon['offer_id'] ) ? 'selected' : '' ,$row['title']);
+
+22 matches across 11 files

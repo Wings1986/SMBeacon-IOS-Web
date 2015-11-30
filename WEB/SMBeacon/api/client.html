@@ -1,0 +1,134 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	</head>
+	<body>
+		<h1> 1. Register </h1>
+		<form action="index.php?action=register" method="post" enctype="multipart/form-data">
+			First Name: <input type="text" name="firstname"> <br>
+			Last Name: <input type="text" name="lastname"> <br>
+			Age: <input type="text" name="age"> <br>
+			Gender: <input type="text" name="gender"> <br>
+			Email: <input type="text" name="email"> <br>
+			Password: <input type="password" name="password"> <br>
+			Phone: <input type="text" name="phone"> <br>
+			Avatar :  <input type="file" name="avatar"><br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+
+		<h1> 2. Login </h1>
+		<form action="index.php?action=login" method="post">
+			Email: <input type="text" name="email"> <br>
+			Password: <input type="password" name="password"> <br>
+			DeviceToken :  <input type="text" name="deviceToken"><br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 3. Update Profile </h1>
+		<form action="index.php?action=update_profile" method="post" enctype="multipart/form-data">
+			User ID: <input type="text" name="userid" value="1"> <br>
+			First Name: <input type="text" name="firstname"> <br>
+			Last Name: <input type="text" name="lastname"> <br>
+			Email: <input type="text" name="email"> <br>
+			Password: <input type="password" name="password"> <br>
+			Phone: <input type="text" name="phone"> <br>
+			Avatar :  <input type="file" name="avatar"><br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 4. Create Review </h1>
+		<form action="index.php?action=create_review" method="post" enctype="multipart/form-data">
+			User ID: <input type="text" name="userid" value="1"> <br>
+			Title: <input type="text" name="title"> <br>
+			Description: <textarea name="description"></textarea> <br>
+			Resturant: <input type="text" name="resturant"> <br>
+			Latitude: <input type="text" name="latitude"> <br>
+			Longitude: <input type="text" name="longitude"> <br>
+			Tag: <input type="text" name="tag"> <br>
+			With: <input type="text" name="with"> <br>
+			Photo :  <input type="file" name="image"><br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 5. Like Review </h1>
+		<form action="index.php?action=like_review" method="post">		
+			User ID: <input type="text" name="userid" value="1"> <br>
+			Review ID: <input type="text" name="reviewid" value="1"> <br>	
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 6. Comment Review </h1>
+		<form action="index.php?action=comment_review" method="post">		
+			User ID: <input type="text" name="userid" value="1"> <br>
+			Review ID: <input type="text" name="reviewid" value="1"> <br>	
+			Comment: <textarea name="comment"></textarea> <br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>	
+		
+		<h1> 7. Search Review </h1>
+		<form action="index.php?action=search_review" method="post">			
+			Type: <input type="text" name="type" value=""> <br>	
+			Key: <input type="text" name="key" value=""> <br>		
+			Lat: <input type="text" name="lat" value=""> <br>		
+			Lon: <input type="text" name="lon" value=""> <br>		
+			Distance: <input type="text" name="distance" value=""> <br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 8. Get Top Review </h1>
+		<form action="index.php?action=get_top_review" method="post">	
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 9. User's Review </h1>
+		<form action="index.php?action=user_review" method="post">	
+			User ID: <input type="text" name="userid" value="1"> <br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 10. Get Review Detail </h1>
+		<form action="index.php?action=review_detail" method="post">	
+			Review ID: <input type="text" name="reviewid" value="5"> <br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 11. Following User </h1>
+		<form action="index.php?action=following" method="post">	
+			User ID: <input type="text" name="userid" value="5"> <br>
+			Following ID: <input type="text" name="following" value="5"> <br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+		<h1> 12. UnFollowing User </h1>
+		<form action="index.php?action=unfollowing" method="post">	
+			User ID: <input type="text" name="userid" value="5"> <br>
+			Following ID: <input type="text" name="following" value="5"> <br>
+			<input type="submit">
+		</form>
+		<br>
+		<hr>
+		
+	</body>
+</html>
